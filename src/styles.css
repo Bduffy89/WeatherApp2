@@ -19,12 +19,12 @@ hr {
   color: #474040;
 }
 .app-wrapper {
-  max-width: 900px;
+  max-width: max-content;
   margin: 30px auto;
 }
 .weather-app {
   padding: 20px;
-  border: 2px solid #474040;
+  border: 4px solid #474040;
   border-radius: 10px;
 }
 .search-bar {
@@ -35,6 +35,7 @@ hr {
   font-family: "Bebas Neue", cursive;
   font-size: 45px;
   text-align: center;
+  text-decoration-line: underline;
 }
 .numerical-data {
   font-family: "Alumni Sans", sans-serif;
@@ -47,6 +48,9 @@ hr {
   font-weight: 500;
   font-size: 38px;
   text-align: center;
+}
+
+.current-weather-img {
 }
 
 .numerical-data.CF {
@@ -68,8 +72,21 @@ hr {
   border: 1px solid #474040;
 }
 
-.card {
-  margin: 5px auto;
-  padding: 5px;
-  border: 1px solid #474040;
+.card.card-body {
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-body {
+  padding: 3px;
+  margin-bottom: 10px;
+  border: 3px solid #2e86bb;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
 }
