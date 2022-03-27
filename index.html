@@ -25,17 +25,19 @@
       <div class="app-wrapper">
         <div class="weather-app">
           <div class="inner-app-box">
-            <div class="search-bar">
-              <form id="search-bar">
-                <input
-                  id="city-search-input"
-                  type="text"
-                  placeholder="Enter City"
-                  autocomplete="off"
-                  autofocus="on"
-                />
-                <input type="submit" id="search-button" vaule="search" />
-              </form>
+            <div class="container">
+              <div class="search-bar">
+                <form id="search-bar">
+                  <input
+                    id="city-search-input"
+                    type="text"
+                    placeholder="Enter City"
+                    autocomplete="off"
+                    autofocus="on"
+                  />
+                  <input type="submit" id="search-button" vaule="search" />
+                </form>
+              </div>
             </div>
             <div id="search-result" class="container location">
               Isengard
@@ -88,79 +90,24 @@
                       <div class="col-sm">
                         <div class="card d-inline-flex p-2 bd-highlight">
                           <div class="card-body">
-                            <h6 class="card-title">Monday</h6>
+                            <h6 class="card-title weather-forecast-date">
+                              Monday
+                            </h6>
                             <ul>
-                              <li class="list-group-item">High 22°F</li>
+                              <li class="list-group-item">
+                                High
+                                <span id="max-forecast-temperature">22</span>°C
+                              </li>
                               <li class="list-group-item">
                                 <img
                                   src="http://openweathermap.org/img/wn/04d@2x.png"
+                                  width="48px"
                                 />
                               </li>
-                              <li class="list-group-item">Low 9°F</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm">
-                        <div class="card d-inline-flex p-2 bd-highlight">
-                          <div class="card-body">
-                            <h6 class="card-title">Monday</h6>
-                            <ul>
-                              <li class="list-group-item">High 22°F</li>
                               <li class="list-group-item">
-                                <img
-                                  src="http://openweathermap.org/img/wn/04d@2x.png"
-                                />
+                                Low
+                                <span id="min-forecast-temperature">9</span>°C
                               </li>
-                              <li class="list-group-item">Low 9°F</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm">
-                        <div class="card d-inline-flex p-2 bd-highlight">
-                          <div class="card-body">
-                            <h6 class="card-title">Monday</h6>
-                            <ul>
-                              <li class="list-group-item">High 22°F</li>
-                              <li class="list-group-item">
-                                <img
-                                  src="http://openweathermap.org/img/wn/04d@2x.png"
-                                />
-                              </li>
-                              <li class="list-group-item">Low 9°F</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm">
-                        <div class="card d-inline-flex p-2 bd-highlight">
-                          <div class="card-body">
-                            <h6 class="card-title">Monday</h6>
-                            <ul>
-                              <li class="list-group-item">High 22°F</li>
-                              <li class="list-group-item">
-                                <img
-                                  src="http://openweathermap.org/img/wn/04d@2x.png"
-                                />
-                              </li>
-                              <li class="list-group-item">Low 9°F</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm">
-                        <div class="card d-inline-flex p-2 bd-highlight">
-                          <div class="card-body">
-                            <h6 class="card-title">Monday</h6>
-                            <ul>
-                              <li class="list-group-item">High 22°F</li>
-                              <li class="list-group-item">
-                                <img
-                                  src="http://openweathermap.org/img/wn/04d@2x.png"
-                                />
-                              </li>
-                              <li class="list-group-item">Low 9°F</li>
                             </ul>
                           </div>
                         </div>

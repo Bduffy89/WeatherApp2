@@ -1,8 +1,12 @@
-
+form {
+  font-family: "Bebas Neue", cursive;
+}
 li {
   font-family: "Bebas Neue", cursive;
   font-size: 25px;
   font-weight: 300;
+  list-style-type: none;
+  text-align: center;
 }
 h4 {
   font-family: "Alumni Sans", sans-serif;
@@ -113,8 +117,19 @@ hr {
   border: 3px solid #474040;
   background-color: #abaf84;
   color: white;
-  font-size: 14px;
   text-size-adjust: auto;
   text-align: center;
   position: relative;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  color: #474040;
+}
+.max-forecast-temperature {
+  font-size: 14px;
+  color: aquamarine;
+}
+.min-forecast-temperature {
+  font-size: 14px;
 }
