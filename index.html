@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Domine:wght@400;500;600;700&family=Vollkorn+SC:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -39,7 +39,7 @@
             </div>
             <div id="search-result" class="container location">
               Isengard
-              <h4 id="current-time">14:33</h4>
+              <span> <h4 id="current-time"></h4></span>
             </div>
             <div class="container over current-weather-box">
               <div class="row justify-content-md-center">
@@ -47,12 +47,12 @@
                   <ul>
                     <li>
                       Humidity:
-                      <span class="parameter-data">44 </span>
+                      <span class="parameter-data" id="humidity">Perfect </span>
                       <span>%</span>
                     </li>
                     <li>
                       Wind Speed:
-                      <span class="parameter-data"> 22 </span>
+                      <span class="parameter-data" id="wind">Perfect </span>
                       <span> Km/hr </span>
                     </li>
                   </ul>
@@ -61,15 +61,20 @@
                   <ul>
                     <li>
                       <img
+                        id="weather-icon"
                         class="current-weather-img"
                         src="http://openweathermap.org/img/wn/01d@2x.png"
                       />
                     </li>
-                    <li class="weather-parameter">Weather Desription</li>
+                    <li class="weather-parameter" id="weather-description"></li>
                   </ul>
                 </div>
                 <div class="col-md-auto numerical-data CF">
-                  <span>44</span>°C | <span>100</span> °F
+                  <span class="temperature" id="temp"></span>
+                  <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
                 </div>
               </div>
             </div>
