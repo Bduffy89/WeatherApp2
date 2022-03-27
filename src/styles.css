@@ -69,6 +69,9 @@ hr {
   text-align: center;
 }
 
+.current-weather-box {
+  margin: 0 auto;
+}
 .current-weather-img {
 }
 
