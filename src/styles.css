@@ -73,6 +73,7 @@ hr {
   margin: 0 auto;
 }
 .current-weather-img {
+  display: block;
 }
 
 .numerical-data.CF {
@@ -80,12 +81,14 @@ hr {
   font-size: 35px;
   font-weight: 300;
   text-align: center;
+  text-size-adjust: auto;
 }
 .forecast-title {
   font-family: "Bebas Neue", cursive;
   font-weight: 200;
   font-size: 30px;
   text-align: center;
+  text-size-adjust: auto;
 }
 
 .five-day-box {
@@ -110,6 +113,7 @@ hr {
   background-color: #abaf84;
   color: white;
   font-size: 14px;
+  text-size-adjust: auto;
   text-align: center;
   position: relative;
 }
