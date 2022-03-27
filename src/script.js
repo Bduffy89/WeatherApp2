@@ -82,4 +82,104 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelciusTemp);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row gy-3">`;
+  forecastHTML =
+    forecastHTML +
+    `                <div class="col-sm">
+                        <div class="card d-inline-flex p-2 bd-highlight">
+                          <div class="card-body">
+                            <h6 class="card-title weather-forecast-date">
+                              Monday
+                            </h6>
+                            <ul>
+                              <li class="list-group-item">
+                                High
+                                <span id="max-forecast-temperature">22</span>°C
+                              </li>
+                              <li class="list-group-item">
+                                <img
+                                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                                  width="48px"
+                                />
+                              </li>
+                              <li class="list-group-item">
+                                Low
+                                <span id="min-forecast-temperature">9</span>°C
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  forecastHTML =
+    forecastHTML +
+    `                <div class="col-sm">
+                        <div class="card d-inline-flex p-2 bd-highlight">
+                          <div class="card-body">
+                            <h6 class="card-title weather-forecast-date">
+                              Monday
+                            </h6>
+                            <ul>
+                              <li class="list-group-item">
+                                High
+                                <span id="max-forecast-temperature">22</span>°C
+                              </li>
+                              <li class="list-group-item">
+                                <img
+                                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                                  width="48px"
+                                />
+                              </li>
+                              <li class="list-group-item">
+                                Low
+                                <span id="min-forecast-temperature">9</span>°C
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
 search("Mombasa");
+
+function save() {
+  forecastHTML =
+    forecastHTML +
+    `                <div class="col-sm">
+                        <div class="card d-inline-flex p-2 bd-highlight">
+                          <div class="card-body">
+                            <h6 class="card-title weather-forecast-date">
+                              Monday
+                            </h6>
+                            <ul>
+                              <li class="list-group-item">
+                                High
+                                <span id="max-forecast-temperature">22</span>°C
+                              </li>
+                              <li class="list-group-item">
+                                <img
+                                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                                  width="48px"
+                                />
+                              </li>
+                              <li class="list-group-item">
+                                Low
+                                <span id="min-forecast-temperature">9</span>°C
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
