@@ -39,7 +39,7 @@ hr {
   border-radius: 50px;
 }
 .app-wrapper {
-  max-width: fit-content;
+  max-width: 900px;
   margin: 30px auto;
 }
 .weather-app {
@@ -97,26 +97,6 @@ hr {
   margin: 5px auto;
   padding: 10px;
   border: 3px solid #474040;
-}
-
-.card.card-body {
-  font-family: arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-body {
-  padding: 3px;
-  margin: 5px 0px;
-  border: 3px solid #474040;
-  background-color: #abaf84;
-  color: white;
-  text-size-adjust: auto;
-  text-align: center;
-  position: relative;
 }
 
 .weather-forecast-date {

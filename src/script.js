@@ -90,7 +90,7 @@ function displayForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `               <div class="card d-inline-flex p-2 bd-highlight">
+      `               <div class="card">
                           <div class="card-body">
                             <h6 class="card-title weather-forecast-date">
                               ${day}
@@ -123,3 +123,26 @@ function displayForecast() {
 
 displayForecast();
 search("Mombasa");
+
+
+                            <div class="row">
+                                <div class="col">
+                            <ul>
+                              <li class="list-group-item">
+                                High
+                                <span id="max-forecast-temperature">22</span>°C
+                              </li>
+                              <li class="list-group-item">
+                                <img
+                                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                                  width="48px"
+                                />
+                              </li>
+                              <li class="list-group-item">
+                                Low
+                                <span id="min-forecast-temperature">9</span>°C
+                              </li>
+                            </ul>
+                            </div>
+                            </div>
+                     
