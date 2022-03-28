@@ -25,41 +25,39 @@
       <div class="app-wrapper">
         <div class="weather-app">
           <div class="inner-app-box">
-            <div class="container">
-              <div class="search-bar">
-                <form id="search-bar">
-                  <input
-                    id="city-search-input"
-                    type="text"
-                    placeholder="Enter City"
-                    autocomplete="off"
-                    autofocus="on"
-                  />
-                  <input type="submit" class="search-button" vaule="search" />
-                </form>
-              </div>
+            <div class="container search-bar-wrapper">
+              <form id="search-bar">
+                <input
+                  id="city-search-input"
+                  type="text"
+                  placeholder="Enter City"
+                  autocomplete="off"
+                  autofocus="on"
+                />
+                <input type="submit" class="search-button" vaule="search" />
+              </form>
             </div>
             <div id="search-result" class="container location">
               Isengard
               <span> <h4 id="current-time"></h4></span>
             </div>
-            <div class="container over current-weather-box">
+            <div class="container current-weather-box">
               <div class="row justify-content-md-center">
-                <div class="col-md-auto">
-                  <ul>
-                    <li>
+                <div class="col-4">
+                  <ul">
+                    <li class="weather-parameter">
                       Humidity:
                       <span class="parameter-data" id="humidity">Perfect </span>
                       <span>%</span>
                     </li>
-                    <li>
+                    <li class="weather-parameter">
                       Wind Speed:
                       <span class="parameter-data" id="wind">Perfect </span>
                       <span> Km/hr </span>
                     </li>
                   </ul>
                 </div>
-                <div class="col-md-auto">
+                <div class="col-4">
                   <ul>
                     <li>
                       <img
@@ -69,10 +67,10 @@
                         width="100px"
                       />
                     </li>
-                    <li class="weather-parameter" id="weather-description"></li>
+                    <li class="weatherDescription" id="weather-description"></li>
                   </ul>
                 </div>
-                <div class="col-md-auto numerical-data CF">
+                <div class="col-4 numerical-data CF">
                   <span class="temperature" id="temp"></span>
                   <span class="units">
                     <a href="#" id="celsius-link">°C</a> |

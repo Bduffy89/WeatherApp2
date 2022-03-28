@@ -98,7 +98,7 @@ function displayForecast() {
                                 ${day}
                               </h6>
                             </div>
-                            <ul>
+                            <ul class="ul-forecast">
                               <li class="list-group-item">
                                 High
                                 <span id="max-forecast-temperature">22</span>°C
