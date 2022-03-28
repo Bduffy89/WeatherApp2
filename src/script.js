@@ -85,16 +85,19 @@ celsiusLink.addEventListener("click", displayCelciusTemp);
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="col-2">`;
+  let forecastHTML = `<div class="row">`;
   let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `               <div class="card">
+      `<div class="col">
+                        <div class="card">
                           <div class="card-body">
-                            <h6 class="card-title weather-forecast-date">
-                              ${day}
-                            </h6>
+                            <div class="card-header">
+                              <h6 class="card-title weather-forecast-date">
+                                ${day}
+                              </h6>
+                            </div>
                             <ul>
                               <li class="list-group-item">
                                 High
@@ -113,8 +116,7 @@ function displayForecast() {
                             </ul>
                           </div>
                         </div>
-                      </div>
-                    </div>`;
+                      </div>`;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -123,26 +125,3 @@ function displayForecast() {
 
 displayForecast();
 search("Mombasa");
-
-
-                            <div class="row">
-                                <div class="col">
-                            <ul>
-                              <li class="list-group-item">
-                                High
-                                <span id="max-forecast-temperature">22</span>°C
-                              </li>
-                              <li class="list-group-item">
-                                <img
-                                  src="http://openweathermap.org/img/wn/04d@2x.png"
-                                  width="48px"
-                                />
-                              </li>
-                              <li class="list-group-item">
-                                Low
-                                <span id="min-forecast-temperature">9</span>°C
-                              </li>
-                            </ul>
-                            </div>
-                            </div>
-                     
