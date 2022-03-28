@@ -58,12 +58,13 @@ hr {
 .app-wrapper {
   max-width: 1000px;
   margin: 30px auto;
+  background-color: #1b3e44;
 }
 .weather-app {
   padding: 20px;
   border: 4px solid #474040;
   border-radius: 10px;
-  background-color: #f6f6f9;
+  background-color: #e4e9ef;
 }
 
 .search-button {
