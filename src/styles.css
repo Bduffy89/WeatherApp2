@@ -11,6 +11,14 @@ h4 {
   font-size: 45px;
   text-align: center;
 }
+
+input {
+  border-radius: 25px;
+  border-width: thick;
+  border-radius: 45px;
+  border-style: solid;
+}
+
 h1 {
   font-family: "Alumni Sans", sans-serif;
   font-family: "Bebas Neue", cursive;
@@ -39,7 +47,7 @@ hr {
   border-radius: 50px;
 }
 .app-wrapper {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 30px auto;
 }
 .weather-app {
@@ -50,8 +58,24 @@ hr {
 }
 .search-bar {
   font-family: "Bebas Neue", cursive;
+  display: block;
 }
 
+.search-button {
+  font-size: 15px;
+  border: 4px solid #474040;
+  border-radius: 25px;
+  border-style: solid;
+  padding: 5px 15px;
+  background-color: white;
+  transition: all 200ms ease;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background-color: #1b3e44;
+  color: #f6f6f9;
+}
 .location {
   font-family: "Bebas Neue", cursive;
   font-size: 45px;
@@ -102,6 +126,14 @@ hr {
 .weather-forecast-date {
   font-size: 18px;
   color: #474040;
+}
+
+.card {
+  display: flex;
+  margin: 3px auto;
+}
+.card-header {
+  background-color: #abaf84;
 }
 .max-forecast-temperature {
   font-size: 14px;

@@ -106,7 +106,7 @@ function displayForecast() {
                               <li class="list-group-item">
                                 <img
                                   src="http://openweathermap.org/img/wn/04d@2x.png"
-                                  width="48px"
+                                  width="85px"
                                 />
                               </li>
                               <li class="list-group-item">
