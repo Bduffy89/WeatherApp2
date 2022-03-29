@@ -24,10 +24,18 @@ h4.innerHTML = `${day}, ${hour}:${minute}`;
 
 //Search Location Temp Results
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "14b403338547ae85381bcc96119486e3";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -92,41 +100,51 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelciusTemp);
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
                         <div class="card">
                           <div class="card-body">
                             <div class="card-header">
                               <h6 class="card-title weather-forecast-date">
-                                ${day}
+                                ${formatDay(forecastDay.dt)}
                               </h6>
+                              
                             </div>
                             <ul class="ul-forecast">
                               <li class="list-group-item">
                                 High
-                                <span id="max-forecast-temperature">22</span>°C
+                                <span id="max-forecast-temperature">${Math.round(
+                                  forecastDay.temp.max
+                                )}</span>°C
                               </li>
                               <li class="list-group-item">
                                 <img
-                                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                                  src="http://openweathermap.org/img/wn/${
+                                    forecastDay.weather[0].icon
+                                  }@2x.png"
                                   width="85px"
                                 />
                               </li>
                               <li class="list-group-item">
                                 Low
-                                <span id="min-forecast-temperature">9</span>°C
+                                <span id="min-forecast-temperature">${Math.round(
+                                  forecastDay.temp.min
+                                )}</span>°C
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
