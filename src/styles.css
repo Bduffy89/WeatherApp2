@@ -106,6 +106,10 @@ hr {
   font-size: 38px;
   text-align: center;
 }
+
+.weatherDescription::first-letter {
+  text-transform: capitalize;
+}
 .weather-parameter {
   padding: 5px 0;
   margin: 30px 0;

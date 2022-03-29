@@ -151,4 +151,4 @@ function displayForecast(response) {
   console.log(forecastHTML);
 }
 
-search("Mombasa");
+search("Boston");
